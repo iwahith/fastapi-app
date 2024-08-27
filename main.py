@@ -13,7 +13,7 @@ async def root():
 
 @app.post("/upload/")
 async def create_upload_file(uploaded_file: UploadFile = File(...)):
-    file_location = f"data/{uploaded_file.filename}"
+    file_location = f"{uploaded_file.filename}"
     with open(file_location, "wb+") as file_object:
         file_object.write(await uploaded_file.read())
 
