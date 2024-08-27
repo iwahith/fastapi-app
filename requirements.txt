@@ -1,1 +1,2 @@
 fastapi[all]
+Requests==2.32.3
